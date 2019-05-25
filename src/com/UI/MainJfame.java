@@ -7,31 +7,35 @@ import java.awt.*;
 
 
 public class MainJfame extends JFrame implements Runnable {
+
     private int[] xR = DataContainer.data.getxRightRode();
-    private JLabel[] jLabels = new JLabel[ 20 ];
-    private JPanel[] p = new JPanel[ 5 ];
+    private JLabel[] jLabels = new JLabel[ 10 ];
+    private JLabel[] jLabels0 = new JLabel[ 10 ];
     private ImageIcon BackstageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_01" + ".png");
     private ImageIcon xlcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
 
     public MainJfame() {
-        setLayout(new FlowLayout());
-        setSize(1000,400);
+        // setLayout(new FlowLayout());
+        FlowLayout flowLayout = new FlowLayout();
+        flowLayout.setVgap(0);
+        flowLayout.setHgap(0);
+        setSize(1000, 400);
         Container container = this.getContentPane();
-        container.setLayout(new BoxLayout(container, BoxLayout.X_AXIS));
+        //container.setLayout(new BorderLayout());
+        JPanel mainP = new JPanel();
+        mainP.setLayout(new BorderLayout());
+        container.add(mainP);
+        JPanel[] p = new JPanel[ 5 ];
         for (int i = 0; i < p.length; i++) {
             p[ i ] = new JPanel();
-            p[i].setLayout(new FlowLayout());
-           // p[i].setBounds(0,0,1920,1080);
-            container.add(p[ i ]);
+            p[ i ].setLayout(flowLayout);
+            mainP.add(p[ i ]);
         }
-
         for (int i = 0; i < xR.length - 1; i++) {
-            jLabels[ i ] = new JLabel( );
-            //jLabels[ i ].setIcon(BackstageIcon);
-            p[0].add(jLabels[i]);
-            p[1].add(jLabels[i]);
-            p[2].add(jLabels[i]);
-
+            jLabels[ i ] = new JLabel();
+            jLabels0[ i ] = new JLabel(String.valueOf(xR[ i ]));
+            p[ 0 ].add(jLabels0[ i ], BorderLayout.SOUTH);
+            p[ 1 ].add(jLabels[ i ], BorderLayout.SOUTH);
         }
         //pack();
         setLocationRelativeTo(null);
@@ -43,14 +47,11 @@ public class MainJfame extends JFrame implements Runnable {
     public void run() {
         while (true) {
             for (int i = 0; i < xR.length - 1; i++) {
-                //jLabels[ i ].setText(xR[ i ] + "");
                 if (xR[ i ] == 0) {
-                     jLabels[ i ].setIcon(BackstageIcon);
-                   // jLabels[ i ].setDisplayedMnemonic(20);
+                    jLabels[ i ].setIcon(BackstageIcon);
                 } else {
-                     jLabels[ i ].setIcon(xlcarimageicon);
+                    jLabels[ i ].setIcon(xlcarimageicon);
                 }
-
             }
         }
     }
