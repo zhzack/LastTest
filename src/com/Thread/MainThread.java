@@ -15,23 +15,8 @@ public class MainThread extends Thread {
 //        addCarThread.start();
 //        CarThread carThread = new CarThread();
 //        carThread.start();
-        Runnable rgbTask = new RGBThread();
-        Runnable addCarTask = new AddCarThread();
-        Runnable carTask = new CarThread();
-        Runnable jframeTask = new MainJfame();
-        Runnable firstJfame = new FirstJfame();
 
-        Thread rgbThread = new Thread(rgbTask);
-        Thread addCarThread = new Thread(addCarTask);
-        Thread carThread = new Thread(carTask);
-        //Thread jframeThread = new Thread(jframeTask);
-        Thread firstThread = new Thread(firstJfame);
-
-        rgbThread.start();
-        addCarThread.start();
-        carThread.start();
-        //jframeThread.start();
-       // firstThread.start();
+        //firstThread.start();
 
     }
 }

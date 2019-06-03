@@ -17,18 +17,18 @@ public class AddCarThread implements Runnable {
     public void run() {
 //        System.out.println("xR  ADD");
         while (true) {
-            int[] xR = DataContainer.data.getxRightRode();
-            int[] xL=DataContainer.data.getyLeftRode();
-            int[] yU=DataContainer.data.getyLeftRode();
-            int[] yD=DataContainer.data.getyRightRode();
+            int[] xR = DataContainer.data.getxRRode();
+            int[] xL = DataContainer.data.getxLRode();
+            int[] yU = DataContainer.data.getyLeftRode();
+            int[] yD = DataContainer.data.getyURode();
 
-            DataContainer.data.setxRightRode(addcar(xR));
-            DataContainer.data.setxLeftRode( addcar(xL));
-            DataContainer.data.setyRightRode(addcar(yU));
-            DataContainer.data.setyRightRode(addcar(yD));
+            DataContainer.data.setxRRode(addcar(xR));
+            DataContainer.data.setxLRode(addcar(xL));
+            DataContainer.data.setyLeftRode(addcar(yU));
+            DataContainer.data.setyURode(addcar(yD));
 
             t_sleep(DataContainer.data.AddcarTime);
-            Thread.yield();
+            //Thread.yield();
         }
     }
 
@@ -37,8 +37,10 @@ public class AddCarThread implements Runnable {
         if (isRandom()) {
             if (xR[ xR.length - 1 ] == 0) {
                 xR[ xR.length - 1 ] = 1;
+
             }
         }
+
         return xR;
     }
 

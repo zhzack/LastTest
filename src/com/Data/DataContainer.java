@@ -5,7 +5,7 @@ public class DataContainer {
         //public static int RTime = 10000;
         public static int GTime = 10000;
         public static int BTime = 1000;
-        public static int AddcarTime=1000;
+        public static int AddcarTime=800;
         /**
          * x红绿灯标识
          */
@@ -26,11 +26,11 @@ public class DataContainer {
         /**
          * xLeft方向
          */
-        static int[] xLeftRode = new int[ 11 ];
+        static int[] xLRode = new int[ 11 ];
         /**
          * xRight方向
          */
-        static int[] xRightRode = new int[ 11];
+        static int[] xRRode = new int[ 11];
         /**
          * yLeft方向
          */
@@ -38,7 +38,7 @@ public class DataContainer {
         /**
          * yRight方向
          */
-        static int[] yRightRode = new int[ 11 ];
+        static int[] yURode = new int[ 11 ];
 
         public static int getxRGBInts() {
             return xRGBInts;
@@ -72,21 +72,22 @@ public class DataContainer {
             data.yRGBStrings = yRGBStrings;
         }
 
-        public static int[] getxLeftRode() {
-            return xLeftRode;
+        public static int[] getxLRode() {
+            return xLRode;
         }
 
-        public static void setxLeftRode(int[] xLeftRode) {
-            data.xLeftRode = xLeftRode;
+        public static void setxLRode(int[] xLRode) {
+            data.xLRode = xLRode;
         }
 
-        public static int[] getxRightRode() {
-            return xRightRode;
+        public static int[] getxRRode() {
+            return xRRode;
         }
 
-        public static void setxRightRode(int[] xRightRode) {
-            data.xRightRode = xRightRode;
+        public static void setxRRode(int[] xRRode) {
+            data.xRRode = xRRode;
         }
+
 
         public static int[] getyLeftRode() {
             return yLeftRode;
@@ -96,12 +97,12 @@ public class DataContainer {
             data.yLeftRode = yLeftRode;
         }
 
-        public static int[] getyRightRode() {
-            return yRightRode;
+        public static int[] getyURode() {
+            return yURode;
         }
 
-        public static void setyRightRode(int[] yRightRode) {
-            data.yRightRode = yRightRode;
+        public static void setyURode(int[] yURode) {
+            data.yURode = yURode;
         }
 
     }

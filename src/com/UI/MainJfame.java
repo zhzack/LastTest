@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class MainJfame extends JFrame implements Runnable {
 
-    private int[] xR = DataContainer.data.getxRightRode();
+    private int[] xR = DataContainer.data.getxRRode();
     private JLabel[] jLabels = new JLabel[ 10 ];
     private JLabel[] jLabels0 = new JLabel[ 10 ];
     private ImageIcon BackstageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_01" + ".png");
@@ -23,19 +23,20 @@ public class MainJfame extends JFrame implements Runnable {
         Container container = this.getContentPane();
         //container.setLayout(new BorderLayout());
         JPanel mainP = new JPanel();
-        mainP.setLayout(new BorderLayout());
+        //mainP.setLayout(new BorderLayout());
         container.add(mainP);
         JPanel[] p = new JPanel[ 5 ];
         for (int i = 0; i < p.length; i++) {
             p[ i ] = new JPanel();
-            p[ i ].setLayout(flowLayout);
+           // p[ i ].setLayout(flowLayout);
             mainP.add(p[ i ]);
         }
         for (int i = 0; i < xR.length - 1; i++) {
             jLabels[ i ] = new JLabel();
-            jLabels0[ i ] = new JLabel(String.valueOf(xR[ i ]));
-            p[ 0 ].add(jLabels0[ i ], BorderLayout.SOUTH);
-            p[ 1 ].add(jLabels[ i ], BorderLayout.SOUTH);
+            jLabels[ i ].setIcon(BackstageIcon);
+//            jLabels0[ i ] = new JLabel(String.valueOf(xR[ i ]));
+//            p[ 0 ].add(jLabels0[ i ], BorderLayout.SOUTH);
+            p[ 1 ].add(jLabels[ i ] );
         }
         //pack();
         setLocationRelativeTo(null);

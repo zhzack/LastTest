@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.UI.GUI">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="900" height="990"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="299ec" layout-manager="GridBagLayout">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b50d1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="6bfd7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="88a03" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="2d19d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="df79d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="4fee8" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="89f63" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="d5ecb" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="66557" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="a365d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="93825" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="ce662" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="3174f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="fa0d3" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="b51c5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="11f89" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="d8fce" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="656fa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="6ebba" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="d4835" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="42bef" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="8e514" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="6bff7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="a2f68" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="dc847" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="2fd5b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="bd61f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="62aa3" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="d3821" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="a20d9" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="f03aa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="a919" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="da851" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="b4b2c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="6cdac" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <component id="faa25" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <maximumSize width="90" height="90"/>
+              <minimumSize width="90" height="90"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
