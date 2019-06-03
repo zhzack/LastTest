@@ -14,17 +14,20 @@ public class CarThread implements Runnable {
         int[] yD = DataContainer.data.getyURode();
 
         while (true) {
-
+            if (!DataContainer.data.Stop) {
                 DataContainer.data.setxRRode(xchange(xR));
                 DataContainer.data.setxLRode(xchange(xL));
 
                 DataContainer.data.setyLeftRode(ychange(yU));
                 DataContainer.data.setyURode(ychange(yD));
 
-            for (int x : xL) {
-                // System.out.print(x);
+                for (int x : xL) {
+                    // System.out.print(x);
+                }
+                t_sleep(200);
             }
-            t_sleep(250);
+            t_sleep(30);
+
         }
     }
 
@@ -54,9 +57,11 @@ public class CarThread implements Runnable {
         } else {
             carMove(xr);
         }
-       // System.out.println(Arrays.toString(DataContainer.data.getyURode()) + DataContainer.data.getxRGBInts());
+        // System.out.println(Arrays.toString(DataContainer.data.getyURode()) + DataContainer.data.getxRGBInts());
         return xr;
-    }private int[] ychange(int[] xr) {
+    }
+
+    private int[] ychange(int[] xr) {
         xr[ 0 ] = 0;
         if (isYRuning()) {//红灯时
             carmovex(xr);

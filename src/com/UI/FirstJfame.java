@@ -7,6 +7,8 @@ import com.Thread.RGBThread;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class FirstJfame extends JFrame implements Runnable {
@@ -28,8 +30,7 @@ public class FirstJfame extends JFrame implements Runnable {
     private ImageIcon xrcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
     private ImageIcon yucarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yDCar" + ".png");
     private ImageIcon ydcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yUCar" + ".png");
-
-
+    public static Thread[] threads = new Thread[ 5 ];//线程数组
 
     public static void StartAllThread() {
         Runnable rgbTask = new RGBThread();
@@ -37,7 +38,7 @@ public class FirstJfame extends JFrame implements Runnable {
         Runnable carTask = new CarThread();
         // Runnable jframeTask = new MainJfame();
         FirstJfame firstJfame0 = new FirstJfame();
-       
+
         firstJfame0.setVisible(true);
 
 
@@ -47,16 +48,30 @@ public class FirstJfame extends JFrame implements Runnable {
         //Thread jframeThread = new Thread(jframeTask);
         Thread firstThread = new Thread(firstJfame0);
 
-        rgbThread.start();
-        addCarThread.start();
-        carThread.start();
+        threads[ 0 ] = rgbThread;
+        threads[ 1 ] = addCarThread;
+        threads[ 2 ] = carThread;
+        for (int i = 0; i < 3; i++) {
+            threads[ i ].start();
+        }
         //jframeThread.start();
         firstThread.start();
     }
 
+    public static void StopAllThread() {
+        for (int i = 0; i < 3; i++) {
+            try {
+                threads[ i ].wait(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private FirstJfame() {
         init();
-        this.setSize(1095, 1095);
+        setUndecorated(true);
+        this.setSize(1095, 1000);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -65,9 +80,15 @@ public class FirstJfame extends JFrame implements Runnable {
 
         GridBagLayout layout = new GridBagLayout();
         this.setLayout(layout);
+        JButton stopjButton = new JButton("暂停");
+        JButton startjButton = new JButton("开始");
+        JButton exitjButton = new JButton("退出");
+        add(startjButton);
+        add(exitjButton);
         addJlabels(yUjlabels, yDjlabels);
         addJlabels(xRjlabels, xLjlabels);
-        JLabel dogJLabel=new JLabel();
+        JLabel dogJLabel = new JLabel();
+        add(dogJLabel);
         dogJLabel.setIcon(DogsIcon);
         GridBagConstraints s = new GridBagConstraints();//定义一个GridBagConstraints，
         s.fill = GridBagConstraints.NONE;
@@ -75,7 +96,32 @@ public class FirstJfame extends JFrame implements Runnable {
         s.weightx = 0;//该方法设置组件水平的拉伸幅度，如果为0就说明不拉伸，不为0就随着窗口增大进行拉伸，0到1之间
         s.weighty = 0;//该方法设置组件垂直的拉伸幅度，如果为0就说明不拉伸，不为0就随着窗口增大进行拉伸，0到1之间
 
-
+        stopjButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               DataContainer.data.Stop=true;//通过修改来间接控制其他线程的运行（run方法中嵌套if语句）
+            }
+        });
+        startjButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DataContainer.data.Stop=false;
+            }
+        });
+        exitjButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        add(stopjButton);
+        s.gridy = 6;
+        s.gridx = 6;
+        layout.setConstraints(stopjButton, s);
+        s.gridx = 7;
+        layout.setConstraints(startjButton, s);
+        s.gridx = 8;
+        layout.setConstraints(exitjButton, s);
         for (int i = 0; i < yUjlabels.length; i++) {
             if (i < 4) {
                 s.gridy = i;
@@ -100,10 +146,11 @@ public class FirstJfame extends JFrame implements Runnable {
             s.gridy = 4;
             layout.setConstraints(xLjlabels[ xRjlabels.length - i - 1 ], s);
         }
-        s.gridy=8;
-        s.gridx=8;
-        s.weightx=2;
-        layout.setConstraints(dogJLabel,s);
+        s.gridy = 8;
+        s.gridx = 1;
+        // s.weightx = 5;
+        s.gridwidth = 3;
+        layout.setConstraints(dogJLabel, s);
     }
 
     private void addJlabels(JLabel[] yUjlabels, JLabel[] yDjlabels) {

@@ -3,6 +3,7 @@ package com.Data;
 public class DataContainer {
     public static class data {
         //public static int RTime = 10000;
+        public static boolean Stop=false;//通过修改来间接控制其他线程的运行（run方法中嵌套if语句）
         public static int GTime = 10000;
         public static int BTime = 1000;
         public static int AddcarTime=800;

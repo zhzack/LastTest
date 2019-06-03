@@ -16,19 +16,24 @@ public class AddCarThread implements Runnable {
 
     public void run() {
 //        System.out.println("xR  ADD");
+
         while (true) {
-            int[] xR = DataContainer.data.getxRRode();
-            int[] xL = DataContainer.data.getxLRode();
-            int[] yU = DataContainer.data.getyLeftRode();
-            int[] yD = DataContainer.data.getyURode();
+            if (!DataContainer.data.Stop) {
+                int[] xR = DataContainer.data.getxRRode();
+                int[] xL = DataContainer.data.getxLRode();
+                int[] yU = DataContainer.data.getyLeftRode();
+                int[] yD = DataContainer.data.getyURode();
 
-            DataContainer.data.setxRRode(addcar(xR));
-            DataContainer.data.setxLRode(addcar(xL));
-            DataContainer.data.setyLeftRode(addcar(yU));
-            DataContainer.data.setyURode(addcar(yD));
+                DataContainer.data.setxRRode(addcar(xR));
+                DataContainer.data.setxLRode(addcar(xL));
+                DataContainer.data.setyLeftRode(addcar(yU));
+                DataContainer.data.setyURode(addcar(yD));
 
-            t_sleep(DataContainer.data.AddcarTime);
-            //Thread.yield();
+                t_sleep(DataContainer.data.AddcarTime);
+                //Thread.yield();
+            }
+            t_sleep(30);
+
         }
     }
 
