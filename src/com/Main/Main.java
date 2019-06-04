@@ -16,7 +16,7 @@ public class Main  {
         initGobalFont(new Font("微软雅黑", Font.BOLD, 25));
         FirstJfame.StartAllThread();
     }
-    public static void initGobalFont(Font font) {
+    private static void initGobalFont(Font font) {
         FontUIResource fontResource = new FontUIResource(font);
         for(Enumeration<Object> keys = UIManager.getDefaults().keys(); keys.hasMoreElements();) {
             Object key = keys.nextElement();
