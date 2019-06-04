@@ -12,7 +12,7 @@ import java.util.Enumeration;
 public class Main  {
 
     public static void main(String[] args) {
-//        new MainThread().start();
+        //  new MainThread().start();
         initGobalFont(new Font("微软雅黑", Font.BOLD, 25));
         FirstJfame.StartAllThread();
     }
