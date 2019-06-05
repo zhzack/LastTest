@@ -15,14 +15,7 @@ public class DataContainer {
          * y红绿灯标识
          */
         static int yRGBInts;
-        /**
-         * x红绿灯展示
-         */
-        static String[] xRGBStrings = {"xR", "xG", "xB"};
-        /**
-         * y红绿灯展示
-         */
-        static String[] yRGBStrings = {"yR", "yG", "yB"};
+
 
         /**
          * xLeft方向
@@ -55,22 +48,6 @@ public class DataContainer {
 
         public static void setyRGBInts(int yRGBInts) {
             data.yRGBInts = yRGBInts;
-        }
-
-        public static String[] getxRGBStrings() {
-            return xRGBStrings;
-        }
-
-        public static void setxRGBStrings(String[] xRGBStrings) {
-            data.xRGBStrings = xRGBStrings;
-        }
-
-        public static String[] getyRGBStrings() {
-            return yRGBStrings;
-        }
-
-        public static void setyRGBStrings(String[] yRGBStrings) {
-            data.yRGBStrings = yRGBStrings;
         }
 
         public static int[] getxLRode() {

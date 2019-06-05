@@ -4,7 +4,6 @@ import com.Data.DataContainer;
 
 public class CarThread implements Runnable {
     public void run() {
-        // System.out.println("CarThread");
         int[] xR = DataContainer.data.getxRRode();//获取数据
         int[] xL = DataContainer.data.getxLRode();
         int[] yU = DataContainer.data.getyLeftRode();
@@ -18,9 +17,6 @@ public class CarThread implements Runnable {
                 DataContainer.data.setyLeftRode(ychange(yU));
                 DataContainer.data.setyURode(ychange(yD));
 
-                for (int x : xL) {
-                    // System.out.print(x);
-                }
                 t_sleep(200);
             }
             t_sleep(30);

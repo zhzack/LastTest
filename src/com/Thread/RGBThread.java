@@ -18,10 +18,6 @@ public class RGBThread implements Runnable {
         DataContainer.data.setyRGBInts(y);//G
     }
 
-    private void t_sys(int x, int y) {
-//        System.out.print ( DataContainer.data.getxRGBStrings()[x]);
-//         System.out.println( DataContainer.data.getyRGBStrings()[y]);
-    }
 
     public void run() {
         // System.out.println("RGBThread");
@@ -31,22 +27,18 @@ public class RGBThread implements Runnable {
                     switch (i) {
                         case 0:
                             setRGB(0, 1);//RG
-                            t_sys(0, 1);
                             t_sleep(DataContainer.data.GTime);
                             break;
                         case 1:
                             setRGB(0, 2);//RB
-                            t_sys(0, 2);
                             t_sleep(DataContainer.data.BTime);
                             break;
                         case 2:
                             setRGB(1, 0);//GR
-                            t_sys(1, 0);
                             t_sleep(DataContainer.data.GTime);
                             break;
                         case 3:
                             setRGB(2, 0);//BR
-                            t_sys(2, 0);
                             t_sleep(DataContainer.data.BTime);
                             break;
                     }
