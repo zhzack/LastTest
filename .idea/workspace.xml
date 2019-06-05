@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cac93dc-5401-4c82-91cd-22129b63c5d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/10187.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Data/DataContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Data/DataContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Thread/CarThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Thread/CarThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Thread/MainThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Thread/RGBThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Thread/RGBThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Thread/ThreadFa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/FirstJfame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/GUI.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/GraphicsT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/MainJfame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/MainJfame.java" afterDir="false" />
-    </list>
+    <list default="true" id="4cac93dc-5401-4c82-91cd-22129b63c5d7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="537" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -336,7 +322,7 @@
       <workItem from="1559658365595" duration="881000" />
       <workItem from="1559733627914" duration="4588000" />
       <workItem from="1559748537023" duration="264000" />
-      <workItem from="1559749186187" duration="4105000" />
+      <workItem from="1559749186187" duration="4192000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1559658527503</created>
@@ -359,15 +345,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559738858898</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="最终修改">
+      <created>1559753638406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559753638407</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115283000" />
+    <option name="totallyTimeSpent" value="115370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2353255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -378,7 +370,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1633987" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1633987" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,7 +428,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="最终修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="最终修改" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/Test/asd.java" />
