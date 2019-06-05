@@ -30,7 +30,7 @@ public class FirstJfame extends JFrame implements Runnable {
     private ImageIcon xrcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
     private ImageIcon yucarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yDCar" + ".png");
     private ImageIcon ydcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yUCar" + ".png");
-    public static Thread[] threads = new Thread[ 5 ];//线程数组
+    private static Thread[] threads = new Thread[ 5 ];//线程数组
 
     public static void StartAllThread() {
         Runnable rgbTask = new RGBThread();

@@ -2,13 +2,10 @@ package com.Thread;
 
 import com.Data.DataContainer;
 
-import java.util.Arrays;
-
-
 public class CarThread implements Runnable {
     public void run() {
         // System.out.println("CarThread");
-        int[] xR = DataContainer.data.getxRRode();
+        int[] xR = DataContainer.data.getxRRode();//获取数据
         int[] xL = DataContainer.data.getxLRode();
         int[] yU = DataContainer.data.getyLeftRode();
         int[] yD = DataContainer.data.getyURode();
@@ -74,14 +71,14 @@ public class CarThread implements Runnable {
 
     private void carmovex(int[] xr) {
         for (int i = 1; i < xr.length; i++) {
-//                xR[ 0 ] = 0;
+            //从一开始遍历（第零个路段没有前一个车位），判断前一个路段是否为空，如果是空，数据前移，否则不移动。
             if (i != 6) {
                 if (xr[ i - 1 ] == 0) {
                     xr[ i - 1 ] = xr[ i ];
                     xr[ i ] = 0;
-                    if (i == (xr.length - 1)) {
-                        xr[ xr.length - 1 ] = 0;
-                    }
+//                    if (i == (xr.length - 1)) {
+//                        xr[ xr.length - 1 ] = 0;
+//                    }
                 }
             }
         }

@@ -1,6 +1,5 @@
 package com.Main;
 
-import com.Thread.MainThread;
 import com.UI.FirstJfame;
 
 import javax.swing.*;
@@ -15,6 +14,7 @@ public class Main  {
         //  new MainThread().start();
         initGobalFont(new Font("微软雅黑", Font.BOLD, 25));
         FirstJfame.StartAllThread();
+
     }
     private static void initGobalFont(Font font) {
         FontUIResource fontResource = new FontUIResource(font);

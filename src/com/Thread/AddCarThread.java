@@ -42,7 +42,6 @@ public class AddCarThread implements Runnable {
         if (isRandom()) {
             if (xR[ xR.length - 1 ] == 0) {
                 xR[ xR.length - 1 ] = 1;
-
             }
         }
 
