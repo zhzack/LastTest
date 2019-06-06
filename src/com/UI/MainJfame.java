@@ -7,6 +7,8 @@ import com.Thread.RGBThread;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class MainJfame extends JFrame implements Runnable {
@@ -28,6 +30,10 @@ public class MainJfame extends JFrame implements Runnable {
     private ImageIcon xrcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
     private ImageIcon yucarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yDCar" + ".png");
     private ImageIcon ydcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yUCar" + ".png");
+    private JLabel jLabelTime = new JLabel();
+    private JLabel xJLabelRGY = new JLabel();
+    private JLabel yJLabelRGY = new JLabel();
+
     private static Thread[] threads = new Thread[ 5 ];//线程数组
 
     public static void StartAllThread() {
@@ -66,8 +72,14 @@ public class MainJfame extends JFrame implements Runnable {
         JButton stopjButton = new JButton("暂停");
         JButton startjButton = new JButton("开始");
         JButton exitjButton = new JButton("退出");
+
+        xJLabelRGY.setBackground(Color.white);
+        yJLabelRGY.setBackground(Color.white);
+        add(jLabelTime);
         add(startjButton);
         add(exitjButton);
+        add(xJLabelRGY);
+        add(yJLabelRGY);
         addJlabels(yUjlabels, yDjlabels);
         addJlabels(xRjlabels, xLjlabels);
         JLabel dogJLabel = new JLabel();
@@ -85,7 +97,7 @@ public class MainJfame extends JFrame implements Runnable {
         startjButton.addActionListener(e -> DataContainer.data.Stop = false);
         exitjButton.addActionListener(e -> System.exit(0));
         add(stopjButton);
-        s.gridy = 6;
+        s.gridy = 7;
         s.gridx = 6;
         layout.setConstraints(stopjButton, s);
         s.gridx = 7;
@@ -121,6 +133,14 @@ public class MainJfame extends JFrame implements Runnable {
         // s.weightx = 5;
         s.gridwidth = 3;
         layout.setConstraints(dogJLabel, s);
+        s.gridy = 1;
+        s.gridx = 1;
+        layout.setConstraints(jLabelTime, s);
+        s.gridy = 1;
+        s.gridx = 6;
+        layout.setConstraints(xJLabelRGY, s);
+        s.gridy = 2;
+        layout.setConstraints(yJLabelRGY, s);
     }
 
     private void addJlabels(JLabel[] yUjlabels, JLabel[] yDjlabels) {
@@ -135,6 +155,31 @@ public class MainJfame extends JFrame implements Runnable {
         }
     }
 
+    private void ShowRGY() {
+        int index = DataContainer.data.getxRGBInts();
+        if (index == 0) {
+            xJLabelRGY.setForeground(Color.red);
+            xJLabelRGY.setText("东西路：红灯");
+        } else if (index == 1) {
+            xJLabelRGY.setText("东西路：绿灯");
+            xJLabelRGY.setForeground(Color.GREEN);
+        } else if (index == 2) {
+            xJLabelRGY.setText("东西路：黄灯");
+            xJLabelRGY.setForeground(Color.YELLOW);
+        }
+        int index1 = DataContainer.data.getyRGBInts();
+        if (index1 == 0) {
+            yJLabelRGY.setForeground(Color.red);
+            yJLabelRGY.setText("南北路：红灯");
+        } else if (index1 == 1) {
+            yJLabelRGY.setText("南北路：绿灯");
+            yJLabelRGY.setForeground(Color.GREEN);
+        } else if (index1 == 2) {
+            yJLabelRGY.setText("南北路：黄灯");
+            yJLabelRGY.setForeground(Color.YELLOW);
+        }
+    }
+
     @Override
     public void run() {
         while (true) {
@@ -143,6 +188,12 @@ public class MainJfame extends JFrame implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            ShowRGY();
+            SimpleDateFormat sdf = new SimpleDateFormat();// 格式化时间
+            sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");// a为am/pm的标记
+            Date date = new Date();// 获取当前时间
+            jLabelTime.setText("时间：" + sdf.format(date));
+            //System.out.println("现在时间：" + sdf.format(date)); // 输出已经格式化的现在时间（24小时制）
             for (int i = 0; i < xR.length - 1; i++) {
                 if (DataContainer.data.getxRGBInts() == 0) {
                     if (i < 4 || i > 5) {
@@ -209,6 +260,4 @@ public class MainJfame extends JFrame implements Runnable {
             yDjlabels[ i ].setIcon(yucarimageicon2);
         }
     }
-
-
 }

@@ -10,7 +10,6 @@ public class RGBThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     private void setRGB(int x, int y) {

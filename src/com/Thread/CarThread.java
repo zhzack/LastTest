@@ -11,7 +11,7 @@ public class CarThread implements Runnable {
 
         while (true) {
             if (!DataContainer.data.Stop) {
-                DataContainer.data.setxRRode(xchange(xR));
+                DataContainer.data.setxRRode(xchange(xR));//设置数据
                 DataContainer.data.setxLRode(xchange(xL));
 
                 DataContainer.data.setyLeftRode(ychange(yU));
@@ -24,12 +24,12 @@ public class CarThread implements Runnable {
         }
     }
 
-    private boolean isXRuning() {//判断红绿灯
+    private boolean isXRuning() {//判断X红绿灯
         int x = DataContainer.data.getxRGBInts();
         return x == 0;
     }
 
-    private boolean isYRuning() {//判断红绿灯
+    private boolean isYRuning() {//判断Y红绿灯
         int y = DataContainer.data.getyRGBInts();
         return y == 0;
     }
@@ -72,9 +72,6 @@ public class CarThread implements Runnable {
                 if (xr[ i - 1 ] == 0) {
                     xr[ i - 1 ] = xr[ i ];
                     xr[ i ] = 0;
-//                    if (i == (xr.length - 1)) {
-//                        xr[ xr.length - 1 ] = 0;
-//                    }
                 }
             }
         }

@@ -33,7 +33,6 @@ public class AddCarThread implements Runnable {
                 //Thread.yield();
             }
             t_sleep(30);
-
         }
     }
 
