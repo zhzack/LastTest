@@ -108,16 +108,13 @@ public class MainJfame extends JFrame implements Runnable {
             if (i < 4) {
                 s.gridy = i;
                 s.gridx = 4;
-                layout.setConstraints(yDjlabels[ yUjlabels.length - i - 1 ], s);
-                s.gridx = 5;
-                layout.setConstraints(yUjlabels[ i ], s);
             } else {
                 s.gridx = 4;
                 s.gridy = i + 2;
-                layout.setConstraints(yDjlabels[ yUjlabels.length - i - 1 ], s);
-                s.gridx = 5;
-                layout.setConstraints(yUjlabels[ i ], s);
             }
+            layout.setConstraints(yDjlabels[ yUjlabels.length - i - 1 ], s);
+            s.gridx = 5;
+            layout.setConstraints(yUjlabels[ i ], s);
         }
 
         for (int i = 0; i < xRjlabels.length; i++) {
