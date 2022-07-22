@@ -13,28 +13,28 @@ import java.util.Date;
 
 public class MainJfame extends JFrame implements Runnable {
 
-    private int[] xR = DataContainer.data.getxRRode();
-    private int[] xL = DataContainer.data.getxLRode();
-    private int[] yD = DataContainer.data.getyLeftRode();
-    private int[] yU = DataContainer.data.getyURode();
+    private final int[] xR = DataContainer.data.getxRRode();
+    private final int[] xL = DataContainer.data.getxLRode();
+    private final int[] yD = DataContainer.data.getyLeftRode();
+    private final int[] yU = DataContainer.data.getyURode();
 
-    private JLabel[] xRjlabels = new JLabel[ 10 ];
-    private JLabel[] xLjlabels = new JLabel[ 10 ];
-    private JLabel[] yUjlabels = new JLabel[ 8 ];
-    private JLabel[] yDjlabels = new JLabel[ 8 ];
+    private final JLabel[] xRjlabels = new JLabel[ 10 ];
+    private final JLabel[] xLjlabels = new JLabel[ 10 ];
+    private final JLabel[] yUjlabels = new JLabel[ 8 ];
+    private final JLabel[] yDjlabels = new JLabel[ 8 ];
 
 
-    private ImageIcon BackstageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_01" + ".png");
-    private ImageIcon DogsIcon = new ImageIcon("./res/" + "Dogs" + ".gif");
-    private ImageIcon xlcarimageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_xRCar" + ".png");
-    private ImageIcon xrcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
-    private ImageIcon yucarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yDCar" + ".png");
-    private ImageIcon ydcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yUCar" + ".png");
-    private JLabel jLabelTime = new JLabel();
-    private JLabel xJLabelRGY = new JLabel();
-    private JLabel yJLabelRGY = new JLabel();
+    private final ImageIcon BackstageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_01" + ".png");
+    private final ImageIcon DogsIcon = new ImageIcon("./res/" + "Dogs" + ".gif");
+    private final ImageIcon xlcarimageIcon = new ImageIcon("./res/" + "蜂蜜浏览器_xRCar" + ".png");
+    private final ImageIcon xrcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_xLCar" + ".png");
+    private final ImageIcon yucarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yUCar" + ".png");
+    private final ImageIcon ydcarimageicon = new ImageIcon("./res/" + "蜂蜜浏览器_yDCar" + ".png");
+    private final JLabel jLabelTime = new JLabel();
+    private final JLabel xJLabelRGY = new JLabel();
+    private final JLabel yJLabelRGY = new JLabel();
 
-    private static Thread[] threads = new Thread[ 5 ];//线程数组
+    private static final Thread[] threads = new Thread[ 5 ];//线程数组
 
     public static void StartAllThread() {
         Runnable rgbTask = new RGBThread();
@@ -215,7 +215,7 @@ public class MainJfame extends JFrame implements Runnable {
             }
             for (int i = 0; i < yU.length; i++) {
                 if (i < 4) {
-                    move0(i, yU, yUjlabels, yucarimageicon, yD, yDjlabels, yucarimageicon);
+                    move0(i, yU, yUjlabels, yucarimageicon, yD, yDjlabels, ydcarimageicon);
 
                 }
                 if (i > 5 && i < 10) {
@@ -227,7 +227,7 @@ public class MainJfame extends JFrame implements Runnable {
                     if (yD[ i ] == 0) {
                         yDjlabels[ i - 2 ].setIcon(BackstageIcon);
                     } else {
-                        yDjlabels[ i - 2 ].setIcon(yucarimageicon);
+                        yDjlabels[ i - 2 ].setIcon(ydcarimageicon);
                     }
                 }
             }
@@ -244,11 +244,11 @@ public class MainJfame extends JFrame implements Runnable {
         if (yD[ 5 ] == 0) {
             xLjlabels[ 5 ].setIcon(BackstageIcon);
         } else {
-            xLjlabels[ 5 ].setIcon(yucarimageicon);
+            xLjlabels[ 5 ].setIcon(ydcarimageicon);
         }
     }
 
-    private void move0(int i, int[] yU, JLabel[] yUjlabels, ImageIcon yucarimageicon, int[] yD, JLabel[] yDjlabels, ImageIcon yucarimageicon2) {
+    private void move0(int i, int[] yU, JLabel[] yUjlabels, ImageIcon yucarimageicon, int[] yD, JLabel[] yDjlabels, ImageIcon ydcarimageicon2) {
         if (yU[ i ] == 0) {
             yUjlabels[ i ].setIcon(BackstageIcon);
         } else {
@@ -257,7 +257,7 @@ public class MainJfame extends JFrame implements Runnable {
         if (yD[ i ] == 0) {
             yDjlabels[ i ].setIcon(BackstageIcon);
         } else {
-            yDjlabels[ i ].setIcon(yucarimageicon2);
+            yDjlabels[ i ].setIcon(ydcarimageicon2);
         }
     }
 }
